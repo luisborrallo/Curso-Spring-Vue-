@@ -1,32 +1,40 @@
 package com.grupoica.repasojava;
 
+
 import com.grupoica.repasojava.modelo.GestionUsuarios;
+import com.grupoica.repasojava.modelo.Loco;
+import com.grupoica.repasojava.modelo.Usuario;
+
 
 public class ProgramaMain {
 
-	/** P.O.O.
-	 * La unidad básica de almacenamiento son los tipos primitivos y los objetos
-	 * que están basados en clases. Las clases son el molde, plantilla o estructura que indica 
-	 * como serán todos los objetos instancados a partir de ella:
-	 *  Sus variables miembros(campos, atributos, propiedades...) y sus métodos (funciones propias).
-	 *  -Encapsulacion:  capacidad de las clases para  limitar  el acceso a las a variables miembro y 
-	 *  metodos (private, public, protected o por herencia)
-	 *  -Herencia
-	 *  -Polimorfismo
-	 */
-	
 	public static void main(String[] args) {
 		
-		GestionUsuarios gesUsu = new GestionUsuarios();
-		/*gesUsu.add("asdsadasd");
-		gesUsu.listarUsuarios();*/
+		// Ejercicios:
+		// 1 -  Traer los ejemplos del constructor GestionUsuarios a main
+		// 2 - Modificar usuario (metodo para cambiar edad, nombre, loco ....)
+		// 3 - Método eliminar todos los usuarios
+		// 4 - Filtrar usuarios por edad (motrar todos los que tengan cierta edad)
+		// 5 - Filtrar usuarios por edad (los que estén en un rango de edad)
+		
+		GestionUsuarios gestion = new GestionUsuarios();
+		gestion.anadirUsu(new Usuario("PEPE", 30));
+		gestion.anadirUsu(new Usuario("BRUCE",39));
+		Loco loco = new Loco(true, "LUIS",64);
+		gestion.anadirUsu(loco);
+		gestion.filtroEdadUnica(64);
+		gestion.RangoEdad(30, 40);
+		gestion.modifUsuarioEdad(30, "Joker");
+		gestion.modifUsuarioNombre("BRUCE", "Joker");
+		gestion.listarUsuarios();
+		gestion.eliminarUsuarios();
+		gestion.listarUsuarios();
+
 		
 		
-		EjemploMemoria.pruebaPasoPorValor();
-		
-		EjemploMemoria.pruebaPasoPorReferencia();
+		 
 		
 
 	}
-
+	
 }

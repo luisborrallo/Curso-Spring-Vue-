@@ -1,29 +1,19 @@
 package com.grupoica.repasojava.modelo;
 
-public class Usuario  extends Object{
-/**
- * tipica clase Pojo, q solo tiene geter y seter con poca funcionalidad
- * 
- */
-	private String nombre;
+import com.grupoica.repasojava.modelo.Usuario;
+
+public class Usuario {
+
 	private int edad;
-	
+	private String nombre;
+
 	public Usuario() {
-		super();
-		nombre= "Sin nombre";
+		this.edad = 0;
+		this.nombre = "Hola ";
 	}
-	
+
 	public Usuario(String nombre, int edad) {
-		super();
-		this.nombre = nombre;
 		this.edad = edad;
-	}
-
-	public String getNombre() {
-		return nombre;
-	}
-
-	public void setNombre(String nombre) {
 		this.nombre = nombre;
 	}
 
@@ -35,28 +25,32 @@ public class Usuario  extends Object{
 		this.edad = edad;
 	}
 
+	public String getNombre() {
+		return nombre;
+	}
+
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
+	}
+
+	@Override
+	public String toString() {
+		return "edad=" + edad + ", nombre=" + nombre;
+	}
+
+	
+
+
 	@Override
 	public boolean equals(Object obj) {
-		// TODO Auto-generated method stub
-		Usuario usuario = (Usuario) obj;
-		return this.nombre == usuario.nombre
-				&& this.edad  == usuario.edad;
-	}
-	//@Override
-	public boolean equals(Usuario usuario) {
-		// TODO Auto-generated method stub
-		return this.nombre == usuario.nombre
-				&& this.edad  == usuario.edad;
+		Usuario user = (Usuario) obj;
+		return this.nombre.equals(user.nombre)&& this.edad==user.edad;
 	}
 
-
-	@Override// sobreescribir(Machacar el metodo padre)
-			// 2 meotodos o  constructores con mis nombre pero con parametros distintos
-	public String toString() {
-		// TODO Auto-generated method stub
-		return "Usuario "+ nombre + "["+ edad +"]";
-		
+	public boolean equal(Usuario user) {
+		return(this.nombre.equals(user.nombre)&& this.edad==user.edad);
 		
 	}
-	
+
 }
+
