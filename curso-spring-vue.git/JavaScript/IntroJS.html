@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>INTRO JS</title>
+</head>
+<body bgcolor="cian">
+	<h1>Intro JS</h1>	
+	<script type="text/javascript">
+		var mensajeprevio = "Variable global"
+		document.write("<p> Bienvienidos a JS </p>");
+		console.log("desarrollo");
+
+		function repetirMensaje(veces){
+			for (var i = 0; i < veces; i++) {
+				 mensajeFun ="variable local";
+				let texto =mensajeFun+""+i;
+				document.write("<p>"+texto+"</p>");
+
+			}
+			document.write("<p>"+mensajeFun+"</p>")
+		}
+		repetirMensaje(5);
+		document.write("<p>Fuera: "+mensajeFun+ "</p>")
+
+	</script>
+</body>
+</html>

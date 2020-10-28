@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="ISO-8859-1">
+    <title>Repaso JS</title>
+</head>
+
+<body>
+    <h1>Repaso JS: ARRAYS</h1>
+    <script type="text/javascript">
+        function Usuario(nombreP, edadP) {
+            this.nombre = nombreP;
+            // variable local q "clausuramos en un método"
+            var edad = edadP;
+            this.getEdad = function() {
+                //Clousure porque usamos una variable local externa a la funcion
+                //que para poder devolverla JS hace que persista en el tiempo.
+                return edad;
+            }
+        }
+
+        function GestionUsuario() {
+            this.listaUsuarios = new Array();
+            this.listaUsuarios.push(10);
+            var usu = new Usuario();
+            usu.edad = 30;
+            usu.nombre = "Benganito";
+            document.write("Nombre: " + usu.nombre);
+            this.listaUsuarios.push(usu);
+
+
+            let u2 = new Usuario("U2", 50);
+            document.write("<br> Edad U2: " + u2.edad);
+            this.listarUsuarios = function() {
+                for (let i = 0; i < this.listaUsuarios.length; i++) {
+                    document.write("<br> - " + this.listaUsuarios[i]);
+                }
+            }
+            this.listarUsuarios();
+        }
+        let gesUsu = new GestionUsuario();
+        gesUsu.listarUsuarios();
+    </script>
+</body>
+
+</html>

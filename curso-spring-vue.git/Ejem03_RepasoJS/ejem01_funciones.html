@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="ISO-8859-1">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        function sumar(x, y) {
+            return x + y;
+        }
+        var restar = function(x, y) {
+            return x - y;
+        }
+        var multiplicar = new Function("x", "y", "{return x*y;}");
+
+        document.write("Resta : 5 - 3 =" + restar(5, 3));
+        document.write("<br>Suma : 5 + 3 =" + sumar(5, 3));
+        document.write("<br>Multiplica : 5 x 3 =" + multiplicar(5, 3));
+
+        var codigoFun = prompt("¿Qué quieres que haga?");
+        let funUsu = new Function(CodigoFun);
+        funUsu();
+    </script>
+
+</body>
+
+</html>
