@@ -1,31 +1,51 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-    <meta charset="ISO-8859-1">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
 
 <body>
+    <!-- Comentario XML/HTML -->
 
     <script>
         function sumar(x, y) {
             return x + y;
         }
+        sumar.propiedadLoca = 200;
+
         var restar = function(x, y) {
-            return x - y;
-        }
-        var multiplicar = new Function("x", "y", "{return x*y;}");
+                return x - y;
+            }
+            //Funcion flecha division
+        var division = (x, y) => x / y;
+        console.log(`Division ${division(10,3)}`);
 
-        document.write("Resta : 5 - 3 =" + restar(5, 3));
-        document.write("<br>Suma : 5 + 3 =" + sumar(5, 3));
-        document.write("<br>Multiplica : 5 x 3 =" + multiplicar(5, 3));
+        //Funcion flecha resto
+        var resto = (x, y) => x % y;
+        console.log(`Resto ${resto(10,5)}`);
 
-        var codigoFun = prompt("¿Qué quieres que haga?");
-        let funUsu = new Function(CodigoFun);
+        //Funcion flecha suma porcentaje
+        var sumarPorcentaje = (x, y) => (x + (y * 0.10));
+        console.log(`Suma porcentaje ${sumarPorcentaje(10,5)}`);
+
+
+        var multiplicar = new Function("x", "y", "{ return x*y;}");
+        multiplicar.propiedadLoca = 24909;
+        document.write("Suma: 5 + 3 = " + sumar(5, 3) + "<br>");
+        document.write("Resta: 5 - 3 = " + restar(5, 3));
+        document.write("Multiplicar: 5 * 3 = " + multiplicar(5, 3) + "<br>");
+        document.write("Loco: " + sumar.propiedadLoca + "<br>");
+        document.write("Que eres un loco: " + multiplicar.propiedadLoca + "<br>");
+
+        var codigoFun = prompt("Que quieres que haga ");
+        let funUsu = new Function(codigoFun);
         funUsu();
     </script>
 
+    </script>
 </body>
 
 </html>
