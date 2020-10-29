@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="ISO-8859-1">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        function pruebamemoria() {
+            var num = 10;
+            var palabra = "tipo texto";
+            let array = [10, 20, 30];
+
+            ejemplofun(num, palabra, array);
+            document.write("<br> Numero:" + num + " palabra" + palabra + " array" + array);
+        }
+
+        function ejemplofun(num, palabra, array) {
+            document.write("<br> Numero:" + num + " palabra" + palabra + " array" + array);
+            num = 100;
+            palabra = "hasta luego"
+            array[0] = 666;
+            document.write("<br> Numero:" + num + " palabra: " + palabra + " array: " + array);
+        }
+        pruebamemoria();
+    </script>
+
+</body>
+
+</html>
