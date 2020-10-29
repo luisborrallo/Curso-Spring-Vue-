@@ -5,6 +5,19 @@
 </head>
 
 <body>
+
+    <input type="button" value="Haz click" onclick="muestraMensaje()">
+    <input id="btn_2" type="button" value="Haz click 2">
+    <input id="btn_3" type="button" value="Haz click 3">
+    <script>
+        var muestraMensaje = function() {
+            alert("Mensaje 1 mostrado")
+        }
+        document.getElementById("btn_2").onclick = () => alert("Msj 2")
+        let btn_3 = document.getElementsByTagName("input")[2];
+        btn_3.addEventListener("click", () => alert("Boton 3"));
+        btn_3.addEventListener("click", () => alert("Otro callback Boton 3"));
+    </script>
     <script>
         function sumar(x, y) {
             return x + y;
