@@ -1,0 +1,60 @@
+<html>
+
+<head>
+    <title>CALLBACKS</title>
+</head>
+
+<body>
+    <script>
+        function sumar(x, y) {
+            return x + y;
+        }
+
+        var restar = function(x, y) {
+            return x - y;
+        }
+
+        var multiplicar = new Function("x", "y", "{return x*y;}");
+
+        var division = (x, y) => {
+            return x / y
+        };
+
+        function sumarArrays(arr_1, arr_2) {
+            let arraySuma = [];
+            for (let i = 0; i < arr_1.length; i++) {
+                arraySuma[i] = arr_1[i] + arr_2[i];
+            }
+            return arraySuma;
+        }
+
+        function operarArrays(arr_1, arr_2, funcionCallback) {
+            let arrayResult = [];
+            for (let i = 0; i < arr_1.length; i++) {
+                arrayResult[i] = funcionCallback(arr_1[i], arr_2[i]);
+            }
+            return arrayResult;
+        }
+        let arrResultado = sumarArrays([2, 3, 4], [12, 32, 44]);
+        console.log(`Suma: ${arrResultado}`);
+        console.log(`CALLBACKS:`);
+        //Multiplicacion con  callback
+        let arrMult = operarArrays([2, 3, 4], [12, 32, 44], multiplicar);
+        console.log(`Mult con CB: ${arrMult}`);
+        //Division con callback
+        let arrDiv = operarArrays([2, 3, 4], [12, 32, 44], division);
+        console.log(`Div con CB: ${arrDiv}`);
+        //Ejercicio calcular resto callback + lambda
+        let arrResto = operarArrays([12, 35, 4], [12, 32, 44], function(a, b) {
+            return a % b;
+        });
+        //Ejercicio calcular aumento porcentaje callback + lambda
+        console.log(`Resto: ${arrResto}`);
+        let arrPorcentaje = operarArrays([10, 16, 23, 41], [2, 3, 4, 2], function(a, b) {
+            return a + b * a * 0.01;
+        });
+        console.log(`Porcentaje: ${arrPorcentaje}`);
+    </script>
+</body>
+
+</html>
