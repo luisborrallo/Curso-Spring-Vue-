@@ -33,7 +33,7 @@ public class Caballo extends Vehiculo implements Animal {
 	
 	@Override
 	public void alimentarse(String comida) {
-		System.out.println("El caballo se come  " + comida);
+		System.out.println("El caballo se come   " + comida);
 		
 	}
 

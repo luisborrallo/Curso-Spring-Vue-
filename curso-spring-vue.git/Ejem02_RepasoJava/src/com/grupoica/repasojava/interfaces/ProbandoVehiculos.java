@@ -26,7 +26,7 @@ public class ProbandoVehiculos {
 		}
 		
 		ArrayList<Animal> granja = new ArrayList<>();
-		granja.add(new Caballo("messi",1500, 60));
+		granja.add(new Caballo("messi",100, 80));
 		granja.add(new Perro(true));
 		System.out.println("en mi  granja hay:");
 		
