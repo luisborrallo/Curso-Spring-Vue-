@@ -1,29 +1,27 @@
 package com.grupoica.repasojava.interfaces;
 
-public class Patinete extends Vehiculo implements Motorizable {
+public class Patinete  implements Motorizable {
 
 	private int bateria;
 	
-	public Patinete(String marca, float peso, int bateria) {
-		super(marca, peso);
+	public Patinete( int bateria) {
 		this.bateria = bateria;
-		
 	}
+
+
+
+
+
 
 	@Override
 	public void encender() {
-		System.out.println("Patinete encendido");
+		System.out.println("Enciendes el patinete");
 		
 	}
 
-	@Override
-	public void desplazarse(float distancia) {
-		System.out.println("Te estas desplazando en patinete");
-		
-	}
+
 
 }
 
-	
 	
 

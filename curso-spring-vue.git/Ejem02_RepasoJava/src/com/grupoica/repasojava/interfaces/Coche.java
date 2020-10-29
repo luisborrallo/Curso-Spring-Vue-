@@ -1,9 +1,9 @@
 package com.grupoica.repasojava.interfaces;
 
-public class Coche extends Vehiculo implements Motorizable {
-
-	float gasolina;
+public class Coche extends Vehiculo implements Motorizable{
 	
+	private float gasolina;
+
 	public Coche(String marca, float peso, float gasolina) {
 		super(marca, peso);
 		this.gasolina = gasolina;
@@ -19,19 +19,25 @@ public class Coche extends Vehiculo implements Motorizable {
 
 	@Override
 	public void aceleracion() {
-		
+		// TODO Auto-generated method stub
 		//super.aceleracion();
-		System.out.println(marca + " - Acelerando coche, cuidado ");
+		System.out.println(super.getMarca()+" Acelerando, es un coche, cuidado");
+	}
+
+
+
+	@Override
+	public void encender() {
+		System.out.println("Arranco el coche "+ super.getMarca() + " metiendo la llave");
+		
 	}
 
 	@Override
 	public void desplazarse(float distancia) {
-		System.out.println(marca + " rueda " + distancia + " metros");
-	}
-
-	@Override
-	public void encender() {
-		System.out.println(marca + " enciende ");
+		// TODO Auto-generated method stub
+		
 	}
 	
+	
+
 }

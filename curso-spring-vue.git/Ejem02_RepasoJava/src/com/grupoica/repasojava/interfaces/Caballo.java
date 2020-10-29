@@ -1,6 +1,6 @@
 package com.grupoica.repasojava.interfaces;
 
-public class Caballo extends Vehiculo {
+public class Caballo extends Vehiculo implements Animal {
 
 	private int dientes;
 	
@@ -31,6 +31,12 @@ public class Caballo extends Vehiculo {
 		
 	}
 	
+	@Override
+	public void alimentarse(String comida) {
+		System.out.println("El caballo se come  " + comida);
+		
+	}
+
 	
 	
 
