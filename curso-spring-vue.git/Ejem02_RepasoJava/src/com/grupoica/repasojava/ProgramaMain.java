@@ -1,6 +1,7 @@
 package com.grupoica.repasojava;
 
 
+import com.grupoica.repasojava.interfaces.ProbandoVehiculos;
 import com.grupoica.repasojava.modelo.GestionUsuarios;
 import com.grupoica.repasojava.modelo.Loco;
 import com.grupoica.repasojava.modelo.Usuario;
@@ -9,7 +10,9 @@ import com.grupoica.repasojava.modelo.Usuario;
 public class ProgramaMain {
 
 	public static void main(String[] args) {
-		
+		/**
+		 * //EjemploHashMap.probandoHasMap();
+
 		// Ejercicios:
 		// 1 -  Traer los ejemplos del constructor GestionUsuarios a main
 		// 2 - Modificar usuario (metodo para cambiar edad, nombre, loco ....)
@@ -22,7 +25,7 @@ public class ProgramaMain {
 		gestion.anadirUsu(new Usuario("BRUCE",39));
 		Loco loco = new Loco(true, "LUIS",64);
 		gestion.anadirUsu(loco);
-		gestion.filtroEdadUnica(64);
+		gestion.filtroEdadUnica(30);
 		gestion.RangoEdad(30, 40);
 		gestion.modifUsuarioEdad(30, "Joker");
 		gestion.modifUsuarioNombre("BRUCE", "Joker");
@@ -30,9 +33,8 @@ public class ProgramaMain {
 		gestion.eliminarUsuarios();
 		gestion.listarUsuarios();
 
-		
-		
-		 
+		**/
+		ProbandoVehiculos.probar();
 		
 
 	}

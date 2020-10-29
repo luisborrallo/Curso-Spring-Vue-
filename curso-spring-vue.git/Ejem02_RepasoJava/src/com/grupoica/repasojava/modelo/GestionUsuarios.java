@@ -72,18 +72,26 @@ public class GestionUsuarios {
 	}
 
 	public void filtroEdadUnica(int edad) {
+		boolean finded =false;
 		for (Usuario usu : listaUsuariosU) {
 			if(usu.getEdad()==edad) {
-				System.out.println(usu.toString());
+				finded = true;
+				System.out.println("Usuario encontrado " + usu.getNombre());
+				System.out.println(usu.toString());		
 			}
+			if(!finded) 
+				System.out.println("User no encontrado ");
 		}
 	}
 	
 	public void RangoEdad(int edadMinima, int edadMaxima) {
+
 		for (Usuario usu : listaUsuariosU) {
 			if(usu.getEdad()>=edadMinima && usu.getEdad()<=edadMaxima) {
 				System.out.println(usu.toString());
 			}
+
+			
 		}
 	}
 	
