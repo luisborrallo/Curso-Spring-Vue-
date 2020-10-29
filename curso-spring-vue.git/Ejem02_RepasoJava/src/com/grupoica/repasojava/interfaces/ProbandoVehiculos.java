@@ -16,7 +16,7 @@ public class ProbandoVehiculos {
 		ArrayList<Motorizable> garaje = new ArrayList<>();
 		//garaje.add(miCaballo);
 		garaje.add(miCoche);
-		garaje.add(miCocheFines);
+		garaje.add(miCocheFines); 
 		garaje.add(miPatinete);
 		//garaje.add(new Vehiculo("No comprado",3));
 		

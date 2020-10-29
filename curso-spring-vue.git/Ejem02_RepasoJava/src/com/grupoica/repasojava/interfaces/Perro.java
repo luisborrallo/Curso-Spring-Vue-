@@ -1,18 +1,19 @@
 package com.grupoica.repasojava.interfaces;
 
 public class Perro implements Animal{
-	boolean cola;
-	public Perro(boolean cola) {
+	boolean ladrido;
+	
+	public Perro(boolean ladrido) {
 		super();
-		this.cola = cola;
+		this.ladrido = ladrido;
 	}
 
-	public boolean isCola() {
-		return cola;
+	public boolean isladrido() {
+		return ladrido;
 	}
 
-	public void setCola(boolean cola) {
-		this.cola = cola;
+	public void setladrido(boolean ladrido) {
+		this.ladrido = ladrido;
 	}
 
 	@Override

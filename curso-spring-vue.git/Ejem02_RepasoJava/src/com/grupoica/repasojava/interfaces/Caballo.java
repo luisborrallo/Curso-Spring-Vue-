@@ -20,7 +20,7 @@ public class Caballo extends Vehiculo implements Animal {
 	@Override
 	public void aceleracion() {
 		// TODO Auto-generated method stub
-		System.out.println(super.getMarca()+" Acelerando, es un caballo, apartaos");
+		System.out.println(super.getMarca()+" Acelerando cuidado");
 	}
 
 
