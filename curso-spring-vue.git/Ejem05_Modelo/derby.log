@@ -1,0 +1,13 @@
+----------------------------------------------------------------
+Fri Oct 30 16:10:02 CET 2020:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.14.1.0 - (1808820): instance a816c00e-0175-7a0e-f670-00000eb014b8 
+on database directory C:\Users\Usuario\Desktop\_Beca_Spring_Android_Vue\db_ica with class loader sun.misc.Launcher$AppClassLoader@73d16e93 
+Loaded from file:/C:/Users/Usuario/.m2/repository/org/apache/derby/derby/10.14.1.0/derby-10.14.1.0.jar
+java.vendor=Oracle Corporation
+java.runtime.version=1.8.0_271-b09
+user.dir=C:\Users\Usuario\Desktop\_Beca_Spring_Android_Vue\curso-spring-vue.git\Ejem05_Modelo
+os.name=Windows 10
+os.arch=amd64
+os.version=10.0
+derby.system.home=null
+Database Class Loader started - derby.database.classpath=''
